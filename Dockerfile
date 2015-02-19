@@ -17,7 +17,7 @@ RUN mv /var/www/html/wordpress /var/www/html/wp_ja
 ADD configs/wp-config.php /var/www/html/wp_ja/wp-config.php
 
 RUN chown -R apache.apache /var/www/html/wp_ja
-RUN service mysqld start && mysql -u root -e "CREATE DATABASE wp_ja;GRANT ALL PRIVILEGES ON wp_ja.* TO 'leech'@'localhost' IDENTIFIED BY 'trf!2trf!2'; FLUSH PRIVILEGES;" &&  service mysqld stop
+RUN service mysqld start && mysql -u root -e "CREATE DATABASE wp_ja;GRANT ALL PRIVILEGES ON wp_ja.* TO 'leech'@'localhost' IDENTIFIED BY 'testtest'; FLUSH PRIVILEGES;" &&  service mysqld stop
 
 RUN echo -e "service mysqld start\nservice httpd start\n/bin/bash" > /startService.sh
 RUN chmod o+x /startService.sh
