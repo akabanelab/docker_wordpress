@@ -27,7 +27,7 @@ define('DB_NAME', 'wp_ja');
 define('DB_USER', 'leech');
 
 /** MySQL データベースのパスワード */
-define('DB_PASSWORD', 'trf!2trf!2');
+define('DB_PASSWORD', 'testtest');
 
 /** MySQL のホスト名 */
 define('DB_HOST', 'localhost');
