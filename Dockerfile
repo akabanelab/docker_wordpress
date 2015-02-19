@@ -7,7 +7,7 @@ RUN yum -y install epel-release
 RUN yum -y install httpd php php-mysql mysql-server php-gd php-apc curl git tar unzip
 
 
-COPY ./lv-4.51-1.el6.rf.x86_64.rpm /tmp
+COPY ./lv-4.51-1.el6.rf.x86_64.rpm /tmp/
 RUN rpm -ivh /tmp/lv-4.51-1.el6.rf.x86_64.rpm
 
 COPY ./wordpress-4.1-ja.tar.gz /var/www/html/
