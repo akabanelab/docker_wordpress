@@ -15,6 +15,7 @@ RUN cd /var/www/html && tar xvfz wordpress-4.1-ja.tar.gz && rm -f wordpress-4.1-
 
 RUN mv /var/www/html/wordpress /var/www/html/wp_ja
 ADD configs/wp-config.php /var/www/html/wp_ja/wp-config.php
+ADD configs/vhost.conf /etc/apache/conf.d/
 
 RUN chown -R apache.apache /var/www/html/wp_ja
 RUN service mysqld start && mysql -u root -e "CREATE DATABASE wp_ja;GRANT ALL PRIVILEGES ON wp_ja.* TO 'leech'@'localhost' IDENTIFIED BY 'testtest'; FLUSH PRIVILEGES;" &&  service mysqld stop
